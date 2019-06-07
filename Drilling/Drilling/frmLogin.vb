@@ -14,8 +14,6 @@ Public Class frmLogin
 
     End Sub
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-
         Dim Formato As String
         Dim SeparadorDecimal As String
         Dim SeparadorMiles As String
@@ -27,47 +25,49 @@ Public Class frmLogin
         SeparadorDecimal = System.Globalization.NumberFormatInfo.CurrentInfo.CurrencyDecimalSeparator
         SeparadorMiles = System.Globalization.NumberFormatInfo.CurrentInfo.CurrencyGroupSeparator
 
-        If Formato <> "en-US" Then
-            sValida = False
-            Mensaje = "- El formato debe ser : Inglés (Estados Unidos)"
-            Mensaje = Mensaje & vbNewLine & "- Su formato actual es :" & Formato
-        End If
-        If SeparadorDecimal <> "." Then
-            sValida = False
-            Mensaje = Mensaje & vbNewLine & ""
-            Mensaje = Mensaje & vbNewLine & "- El separador decimal debe ser : Punto (.)"
-            Mensaje = Mensaje & vbNewLine & "- Su separador decimal actual es : " & SeparadorDecimal
-        End If
+        'If Formato <> "en-US" Then
+        '    sValida = False
+        '    Mensaje = "- El formato debe ser : Inglés (Estados Unidos)"
+        '    Mensaje = Mensaje & vbNewLine & "- Su formato actual es :" & Formato
+        'End If
+        'If SeparadorDecimal <> "." Then
+        '    sValida = False
+        '    Mensaje = Mensaje & vbNewLine & ""
+        '    Mensaje = Mensaje & vbNewLine & "- El separador decimal debe ser : Punto (.)"
+        '    Mensaje = Mensaje & vbNewLine & "- Su separador decimal actual es : " & SeparadorDecimal
+        'End If
 
-        If SeparadorMiles <> " " Then
-            sValida = False
-            Mensaje = Mensaje & vbNewLine & ""
-            Mensaje = Mensaje & vbNewLine & "- El separador de miles debe ser : Espacio ( )"
-            Mensaje = Mensaje & vbNewLine & "- Su separador de miles actual es : " & SeparadorMiles
-        End If
-        If sValida = False Then
-            Mensaje = Mensaje & vbNewLine & ""
-            MsgBox(Mensaje & vbNewLine & "Debe corregir la configuracion antes de Continuar", MsgBoxStyle.Critical, "Error")
-            End
-        End If
+        'If SeparadorMiles <> " " Then
+        '    sValida = False
+        '    Mensaje = Mensaje & vbNewLine & ""
+        '    Mensaje = Mensaje & vbNewLine & "- El separador de miles debe ser : Espacio ( )"
+        '    Mensaje = Mensaje & vbNewLine & "- Su separador de miles actual es : " & SeparadorMiles
+        'End If
+        'If sValida = False Then
+        '    Mensaje = Mensaje & vbNewLine & ""
+        '    MsgBox(Mensaje & vbNewLine & "Debe corregir la configuracion antes de Continuar", MsgBoxStyle.Critical, "Error")
+        '    End
+        'End If
 
-        Try
-            swVersion = False
-            'ConfigurationSettings.AppSettings["IDProject"].ToString()
-            oRf.iIdProject = Integer.Parse(ConfigurationSettings.AppSettings("IDProject").ToString())
-            Dim dtVers As DataTable = oRf.getVersionProject()
-            If Double.Parse(dtVers.Rows(0)("version").ToString()) > Double.Parse(ConfigurationSettings.AppSettings("Version").ToString()) Then
-                swVersion = True
 
-                MsgBox("Hay una nueva actualización en el sistema, se realizará la actualización automáticamente, despues de ello podrá ingresar al sistema", MsgBoxStyle.Information, "Actualización")
-                'MsgBox(Application.StartupPath & Application.ExecutablePath)
-                Me.Close()
-                Kill(Application.ExecutablePath)
+        'Solicita la actualización de la versión del proyecto. AAA
+        'Try
+        '    swVersion = False
+        '    'ConfigurationSettings.AppSettings["IDProject"].ToString()
+        '    oRf.iIdProject = Integer.Parse(ConfigurationSettings.AppSettings("IDProject").ToString())
+        '    Dim dtVers As DataTable = oRf.getVersionProject()
+        '    If Double.Parse(dtVers.Rows(0)("version").ToString()) > Double.Parse(ConfigurationSettings.AppSettings("Version").ToString()) Then
+        '        swVersion = True
 
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+        '        MsgBox("Hay una nueva actualización en el sistema, se realizará la actualización automáticamente, despues de ello podrá ingresar al sistema", MsgBoxStyle.Information, "Actualización")
+        '        'MsgBox(Application.StartupPath & Application.ExecutablePath)
+        '        Me.Close()
+        '        Kill(Application.ExecutablePath)
+
+        '    End If
+        'Catch ex As Exception
+        '    MessageBox.Show(ex.Message)
+        'End Try
     End Sub
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click

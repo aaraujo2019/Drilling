@@ -1,0 +1,87 @@
+Drilling
+Para perforacion 
+
+Menu Data Entry
+Submenu Drilling
+
+Pestaña Planned
+Desde ke Luis Carlos o Elkin (Planeacion) establecen la plataforma
+(Location y target es el mismo termino) 
+East-North-Elevation
+Esta informacion se pasa al topografo. Siguiente pestaña
+
+Reportes
+Reporte historico del programa de perforacion (Historico de los cambios del est-north-elevation planeado)
+Reporte de las plataformas (Informacion de plataformas [planeado])
+
+
+Pestaña Topography
+Anexa nuevas coordenadas mas reales (Topografia)
+East-North-Elevation
+
+Nota: las fotos de la ubicacion del pozo se configura en el app.config
+
+Pestaña Drilling
+	Subpestaña Drilling
+	Bernardo (Exploracion) y nombra el pozo de la plataforma e ingresa los datos
+	Subpestaña Company Drill
+	Se llenan los datos de facturacion de la empresa perforista
+		Subpestaña Drilling Time
+		Guarda tiempos (Time)
+		Reportes: Genera un reporte diario por rango de fechas de tiempos invertidos por maquina (Rig)
+		Subpestaña Lost Tools
+		Guarda las herramientas perdidas o dañadas ($)
+		Subpestaña Billable Aditives
+		Guarda los aditivos perdidas o dañadas ($)
+	Subpestaña Billing
+	Lista los documentos pdf de un pozo por empresa (Facturacion)
+	
+Reportes
+Avance diario de perforacion (Ultimo registro por maquina)
+
+	
+Pestaña Environment
+Se ingresan los datos y con doble clic en el registro se va a la encuesta (Ambiental)
+	Subpestaña Poll Header
+	Se ingresan los datos del encabezado de la encuesta
+	Subpestaña Poll Content
+	Se llena la encuesta (Preguntas)
+	Subpestaña Poll Footer
+	Se llena el pie de pagina (Preguntas)
+	Subpestaña Photograghic ...
+
+	
+Menu Data Entry
+Submenu Survey
+
+Para subir informacion al survey se requiere que los datos sean validados por el boton
+validar datos y visualizar los errores.
+
+
+Menu Reports
+Submenu Drilling
+Drilling report
+Reporte historico por maquina, empresa, tiempos con graficos y demas
+
+
+Nota: La aplicación envia correos cuando un valor sobrepasa un limite en la pestaña
+topography al ingresar o modificar un registro en est-north-elevation. En el app.config
+estan las direcciones de correo a los que se le envia esta alerta.
+Correo desde donde se envian las alertas: Tabla DH_Mail_Parameters.
+Asi mismo cuando la perforacion se acerca a la vena (Vein)
+
+
+Pendiente: Enviar alarmas si no ingresan informacion en:
+			Drilling Progress (DH_DrillProgress), Drilling Time(DH_DrillDrillingTime), 
+			Lost Tools(DH_DrillLostTools) y Billable Aditives (DH_DrillBillableAdditives)
+			
+
+usp_DH_DrillReport_Prod
+usp_DH_Platform_Drilling_Update
+
+
+
+
+
+
+
