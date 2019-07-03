@@ -2890,8 +2890,6 @@ Public Class frmDrilling
             Dim Destino As String
             Dim ArchivosT As New DirectoryInfo(ConfigurationSettings.AppSettings("Ruta_ImgTopo").ToString & txtHoleIDDrill1.Text.ToString)
 
-
-
             For Each file As FileInfo In ArchivosT.GetFiles()
                 lst_ImagenesTopo.Items.Add(file.Name)
             Next
