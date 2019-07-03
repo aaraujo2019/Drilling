@@ -23,24 +23,24 @@ Partial Class frmSurvey
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSurvey))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.cmb_Validacion = New System.Windows.Forms.ComboBox
-        Me.Txt_PathExcel_ = New System.Windows.Forms.TextBox
-        Me.btn_Importar_db = New System.Windows.Forms.Button
-        Me.btn_ValidarNulos = New System.Windows.Forms.Button
-        Me.btn_ImportarExcelaGrid = New System.Windows.Forms.Button
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.btn_AbrirExcel_ = New System.Windows.Forms.Button
-        Me.tabSurvey = New System.Windows.Forms.TabControl
-        Me.TabPage1 = New System.Windows.Forms.TabPage
-        Me.dg_Excel = New System.Windows.Forms.DataGridView
-        Me.TabPage2 = New System.Windows.Forms.TabPage
-        Me.dg_Validacion = New System.Windows.Forms.DataGridView
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmb_Validacion = New System.Windows.Forms.ComboBox()
+        Me.Txt_PathExcel_ = New System.Windows.Forms.TextBox()
+        Me.btn_Importar_db = New System.Windows.Forms.Button()
+        Me.btn_ValidarNulos = New System.Windows.Forms.Button()
+        Me.btn_ImportarExcelaGrid = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btn_AbrirExcel_ = New System.Windows.Forms.Button()
+        Me.tabSurvey = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.dg_Excel = New System.Windows.Forms.DataGridView()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.dg_Validacion = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.tabSurvey.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -224,6 +224,7 @@ Partial Class frmSurvey
         Me.Controls.Add(Me.tabSurvey)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frmSurvey"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual

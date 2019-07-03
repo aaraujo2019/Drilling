@@ -23,15 +23,15 @@ Partial Class frmLogin
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
-        Me.groupBox1 = New System.Windows.Forms.GroupBox
-        Me.pictureBox2 = New System.Windows.Forms.PictureBox
-        Me.txtPwd = New System.Windows.Forms.TextBox
-        Me.txtUser = New System.Windows.Forms.TextBox
-        Me.label2 = New System.Windows.Forms.Label
-        Me.label1 = New System.Windows.Forms.Label
-        Me.pictureBox1 = New System.Windows.Forms.PictureBox
-        Me.btnAceptar = New System.Windows.Forms.Button
-        Me.btnCancelar = New System.Windows.Forms.Button
+        Me.groupBox1 = New System.Windows.Forms.GroupBox()
+        Me.pictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.txtPwd = New System.Windows.Forms.TextBox()
+        Me.txtUser = New System.Windows.Forms.TextBox()
+        Me.label2 = New System.Windows.Forms.Label()
+        Me.label1 = New System.Windows.Forms.Label()
+        Me.pictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.groupBox1.SuspendLayout()
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -143,6 +143,7 @@ Partial Class frmLogin
         Me.ClientSize = New System.Drawing.Size(478, 202)
         Me.Controls.Add(Me.groupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmLogin"

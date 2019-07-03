@@ -30,9 +30,7 @@ Public Class frmSurvey
                 Dim dtSurvey As DataTable = oSurvey.getDHSurvey_ID
 
                 fila = dg_Excel.Rows.Count - 1
-                'MsgBox(fila)
-                'MsgBox(dtSurvey.Rows(0)("EOH").ToString)
-                'MsgBox(dg_Excel.Rows(fila).Cells(1).Value.ToString)
+
                 If dtSurvey.Rows.Count > 0 Then
                     dg_Validacion.Rows.Add("Hold: " & dg_Excel.Rows(0).Cells(0).Value.ToString & " Exist in database, may continue and update the data")
                     sPermiteImport = True
@@ -78,18 +76,9 @@ Public Class frmSurvey
                         End If
                     End If
                 Next
-
-
-
                 MsgBox("Check the tab Validarion Errors ", MsgBoxStyle.Information, "Information")
 
-
-
             End If
-
-
-            
-
         Catch ex As Exception
             MsgBox("Error : " + ex.Message, MsgBoxStyle.Information, "Information")
         End Try
@@ -124,29 +113,22 @@ Public Class frmSurvey
         Catch ex As Exception
 
         End Try
-
-
     End Sub
 
     Private Sub btn_ImportarExcelaGrid_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_ImportarExcelaGrid.Click
         Try
             Dim strconn As String
             strconn = "Provider=Microsoft.ACE.OLEDB.12.0; data source= " + Txt_PathExcel_.Text + ";Extended properties=""Excel 8.0;hdr=yes;imex=1"""
-            Dim mconn As New System.Data.OleDb.OleDbConnection(strconn)
-            Dim ad As New System.Data.OleDb.OleDbDataAdapter("Select * from [" & Accion & "$]", mconn)
+            Dim mconn As New OleDb.OleDbConnection(strconn)
+            Dim ad As New OleDb.OleDbDataAdapter("Select * from [" & Accion & "$]", mconn)
             mconn.Open()
             ad.Fill(dt)
             mconn.Close()
             Me.dg_Excel.DataSource = dt
             btn_ValidarNulos.Enabled = True
-
             'AutoNumberRowsForGridView(dg_Excel)
-
-
-
         Catch ex As System.Data.OleDb.OleDbException
             MessageBox.Show(ex.Message)
-
         End Try
         'cmb_Validacion.Enabled = False
         btn_ValidarNulos.Enabled = True
