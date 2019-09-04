@@ -25,29 +25,29 @@ Public Class frmLogin
         SeparadorDecimal = System.Globalization.NumberFormatInfo.CurrentInfo.CurrencyDecimalSeparator
         SeparadorMiles = System.Globalization.NumberFormatInfo.CurrentInfo.CurrencyGroupSeparator
 
-        If Formato <> "en-US" Then
-            sValida = False
-            Mensaje = "- El formato debe ser : Inglés (Estados Unidos)"
-            Mensaje = Mensaje & vbNewLine & "- Su formato actual es :" & Formato
-        End If
-        If SeparadorDecimal <> "." Then
-            sValida = False
-            Mensaje = Mensaje & vbNewLine & ""
-            Mensaje = Mensaje & vbNewLine & "- El separador decimal debe ser : Punto (.)"
-            Mensaje = Mensaje & vbNewLine & "- Su separador decimal actual es : " & SeparadorDecimal
-        End If
+        'If Formato <> "en-US" Then
+        '    sValida = False
+        '    Mensaje = "- El formato debe ser : Inglés (Estados Unidos)"
+        '    Mensaje = Mensaje & vbNewLine & "- Su formato actual es :" & Formato
+        'End If
+        'If SeparadorDecimal <> "." Then
+        '    sValida = False
+        '    Mensaje = Mensaje & vbNewLine & ""
+        '    Mensaje = Mensaje & vbNewLine & "- El separador decimal debe ser : Punto (.)"
+        '    Mensaje = Mensaje & vbNewLine & "- Su separador decimal actual es : " & SeparadorDecimal
+        'End If
 
-        If SeparadorMiles <> " " Then
-            sValida = False
-            Mensaje = Mensaje & vbNewLine & ""
-            Mensaje = Mensaje & vbNewLine & "- El separador de miles debe ser : Espacio ( )"
-            Mensaje = Mensaje & vbNewLine & "- Su separador de miles actual es : " & SeparadorMiles
-        End If
-        If sValida = False Then
-            Mensaje = Mensaje & vbNewLine & ""
-            MsgBox(Mensaje & vbNewLine & "Debe corregir la configuracion antes de Continuar", MsgBoxStyle.Critical, "Error")
-            End
-        End If
+        'If SeparadorMiles <> " " Then
+        '    sValida = False
+        '    Mensaje = Mensaje & vbNewLine & ""
+        '    Mensaje = Mensaje & vbNewLine & "- El separador de miles debe ser : Espacio ( )"
+        '    Mensaje = Mensaje & vbNewLine & "- Su separador de miles actual es : " & SeparadorMiles
+        'End If
+        'If sValida = False Then
+        '    Mensaje = Mensaje & vbNewLine & ""
+        '    MsgBox(Mensaje & vbNewLine & "Debe corregir la configuracion antes de Continuar", MsgBoxStyle.Critical, "Error")
+        '    End
+        'End If
 
 
         'Solicita la actualización de la versión del proyecto. AAA
